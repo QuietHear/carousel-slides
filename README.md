@@ -1,3 +1,5 @@
+# 功能展示
+[点此观看](https://quiethear.github.io/carousel-slides/幻灯片轮播.html "幻灯片轮播")(建议右键新建窗口查看)
 # 说明文档
 > ### 使用步骤
 >> 1. 下载插件
