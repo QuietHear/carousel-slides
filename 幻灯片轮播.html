@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>幻灯片轮播</title>
+    <link rel="stylesheet" href="css/slidesCarousel.css"/>
+</head>
+<body>
+<div class="bigCarousel">
+    <!--上一个-->
+    <div class="controls prv-btn"></div>
+    <!--轮播区域-->
+    <div class="list">
+        <a href="#" data-shutter-title="1111"><img src="img/a.png" alt="#"></a>
+        <a href="#" data-shutter-title="2222"><img src="img/b.png" alt="#"></a>
+        <a href="#" data-shutter-title="3333"><img src="img/c.png" alt="#"></a>
+        <a href="#" data-shutter-title="4444"><img src="img/d.png" alt="#"></a>
+    </div>
+    <!--下一个-->
+    <div class="controls next-btn"></div>
+    <!--标题文字-->
+    <div class="tit"></div>
+    <!--指示器-->
+    <ul class="indicator">
+        <li data-place="0" class="active">1</li>
+        <li data-place="1">2</li>
+        <li data-place="2">3</li>
+        <li data-place="3">4</li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/jquery1.9.min.js"></script>
+<script type="text/javascript" src="js/velocity.js"></script>
+<script type="text/javascript" src="js/slidesCarousel.js"></script>
+<script>
+    $('.bigCarousel').shutter({
+        shutterW: 1100, // 容器宽度
+        shutterH: 358, // 容器高度
+        isAutoPlay: true, // 是否自动播放
+        playInterval: 3000, // 自动播放时间
+        curDisplay: 0, // 当前激活页
+        fullPage: false // 是否全屏展示
+    });
+</script>
+</body>
+</html>

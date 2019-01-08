@@ -1,0 +1,105 @@
+@charset "utf-8";
+//临时样式
+body {
+  background: black;
+}
+
+//轮播插件
+.bigCarousel {
+  width: 1000px;
+  height: 358px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  //轮播内容
+  .list {
+    width: 100%;
+    height: 100%;
+    a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+      .created {
+        overflow: hidden;
+        position: absolute;
+        z-index: 20;
+      }
+    }
+  }
+  //操作按钮
+  .controls {
+    position: absolute;
+    z-index: 30;
+    width: 49px;
+    height: 49px;
+    cursor: pointer;
+    top: calc((100% - 49px) / 2);
+    &.prv-btn {
+      background: url(../img/shutter_prevBtn.png) 0 0 no-repeat;
+      left: 20px;
+      &:hover {
+        background-position-y: -49px;
+      }
+    }
+    &.next-btn {
+      background: url(../img/shutter_nextBtn.png) 0 0 no-repeat;
+      right: 20px;
+      &:hover {
+        background-position-y: -49px;
+      }
+    }
+  }
+  //轮播标题
+  .tit {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 30;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 20px;
+    background: rgba(0, 0, 0, .6);
+  }
+  //指示器
+  .indicator {
+    position: absolute;
+    z-index: 30;
+    list-style-type: none;
+    padding-left: 0;
+    bottom: 50px;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    li {
+      background: rgba(0, 0, 0, 0.2);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #fff;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active, &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
